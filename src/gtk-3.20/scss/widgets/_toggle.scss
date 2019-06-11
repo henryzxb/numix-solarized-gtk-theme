@@ -30,20 +30,21 @@ $suffix: if($variant == "dark", "-dark", "");
     }
 
     menuitem &, modelbutton & {
-        -gtk-icon-source: -gtk-scaled(url("../assets/menuitem-#{$type}-checked-insensitive.png"),
-                                      url("../assets/menuitem-#{$type}-checked-insensitive@2.png"));
+        -gtk-icon-source: -gtk-scaled(url("../assets/menuitem-#{$type}-checked.png"),
+                                      url("../assets/menuitem-#{$type}-checked@2.png"));
 
         &:disabled { -gtk-icon-source: none; }
 
         &:checked, &:active {
-            -gtk-icon-source: -gtk-scaled(url("../assets/menuitem-#{$type}-checked.png"),
-                                          url("../assets/menuitem-#{$type}-checked@2.png"));
+            -gtk-icon-source: -gtk-scaled(url("../assets/menuitem-#{$type}-checked-insensitive.png"),
+            url("../assets/menuitem-#{$type}-checked-insensitive@2.png"));
 
             &:hover { -gtk-icon-source: -gtk-scaled(url("../assets/menuitem-#{$type}-checked-hover.png"),
                                                     url("../assets/menuitem-#{$type}-checked-hover@2.png")); }
 
-            &:disabled { -gtk-icon-source: -gtk-scaled(url("../assets/menuitem-#{$type}-checked-insensitive.png"),
-                                                       url("../assets/menuitem-#{$type}-checked-insensitive@2.png")); }
+
+            &:insensitive { -gtk-icon-source: -gtk-scaled(url("../assets/menuitem-#{$type}-checked.png"),
+                    url("../assets/menuitem-#{$type}-checked@2.png")); }
         }
 
         &:indeterminate {
@@ -117,8 +118,8 @@ $suffix: if($variant == "dark", "-dark", "");
 
         slider {
             min-height: 18px;
-    	    min-width: 26px;
-	    padding: 0 2px;
+          min-width: 26px;
+      padding: 0 2px;
 
             background-color: $switch_slider_bg_color;
             transition: all 0.3s ease-in;

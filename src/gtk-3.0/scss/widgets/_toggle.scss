@@ -30,20 +30,29 @@ $suffix: if($variant == "dark", "-dark", "");
     }
 
     &.menuitem {
-        -gtk-icon-source: -gtk-scaled(url("../assets/menuitem-#{$type}-checked-insensitive.png"),
-                                      url("../assets/menuitem-#{$type}-checked-insensitive@2.png"));
+        -gtk-icon-source: -gtk-scaled(url("../assets/menuitem-#{$type}-checked.png"),
+                                      url("../assets/menuitem-#{$type}-checked@2.png"));
 
         &:insensitive { -gtk-icon-source: none; }
 
+
+
+
+        
+
+
+
+
         &:checked, &:active {
-            -gtk-icon-source: -gtk-scaled(url("../assets/menuitem-#{$type}-checked.png"),
-                                          url("../assets/menuitem-#{$type}-checked@2.png"));
+            -gtk-icon-source: -gtk-scaled(url("../assets/menuitem-#{$type}-checked-insensitive.png"),
+            url("../assets/menuitem-#{$type}-checked-insensitive@2.png"));
 
             &:hover { -gtk-icon-source: -gtk-scaled(url("../assets/menuitem-#{$type}-checked-hover.png"),
                                                     url("../assets/menuitem-#{$type}-checked-hover@2.png")); }
 
-            &:insensitive { -gtk-icon-source: -gtk-scaled(url("../assets/menuitem-#{$type}-checked-insensitive.png"),
-                                                          url("../assets/menuitem-#{$type}-checked-insensitive@2.png")); }
+
+            &:insensitive { -gtk-icon-source: -gtk-scaled(url("../assets/menuitem-#{$type}-checked.png"),
+                    url("../assets/menuitem-#{$type}-checked@2.png")); }
         }
 
         &:inconsistent {
