@@ -8,7 +8,7 @@ First, you need to compile the theme using the [Sass](http://sass-lang.com/) com
 
 |Distro|Commands|
 |:----:|:----:|
-|[Archl]|`sudo pacman -S glib2 gdk-pixbuf2 ruby-sass inkscape`|
+|[Archlinux]|`sudo pacman -S glib2 gdk-pixbuf2 ruby-sass inkscape`|
 |[Opensuse]|`sudo zypper install glib2-devel gdk-pixbuf-devel`|
 |[Fedora]|`sudo dnf install glib2-devel gdk-pixbuf2-devel`|
 |[Debian] &nbsp;[Ubuntu]|`sudo apt-get install ruby-sass libglib2.0-dev libgdk-pixbuf2.0-dev libxml2-utils`|
