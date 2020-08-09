@@ -15,7 +15,8 @@ else
     echo Rendering $ASSETS_DIR/$i.png
     $INKSCAPE --export-id=$i \
               --export-id-only \
-              --export-png=$ASSETS_DIR/$i.png $SRC_FILE >/dev/null #\
+              --export-filename=$ASSETS_DIR/$i.png $SRC_FILE >/dev/null #\ （inkscape版本号大于0.92.5使用这个）
+			#--export-png=$ASSETS_DIR/$i.png $SRC_FILE >/dev/null #\ （inkscape版本号小于或等于0.92.5使用这个）
     # && $OPTIPNG -o7 --quiet $ASSETS_DIR/$i.png 
 fi
 if [ -f $ASSETS_DIR/$i@2.png ]; then
@@ -25,7 +26,8 @@ else
     $INKSCAPE --export-id=$i \
               --export-dpi=180 \
               --export-id-only \
-              --export-png=$ASSETS_DIR/$i@2.png $SRC_FILE >/dev/null #\
+              --export-filename=$ASSETS_DIR/$i@2.png $SRC_FILE >/dev/null #\ （inkscape版本号大于0.92.5使用这个）
+			#--export-png=$ASSETS_DIR/$i@2.png $SRC_FILE >/dev/null #\ （inkscape版本号小于或等于0.92.5使用这个）
     # && $OPTIPNG -o7 --quiet $ASSETS_DIR/$i@2.png 
 fi
 done
